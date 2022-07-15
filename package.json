@@ -1,0 +1,19 @@
+{
+  "name": "cursobackend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://varelamatias@github.com/varelamatias/cursobackend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/varelamatias/cursobackend/issues"
+  },
+  "homepage": "https://github.com/varelamatias/cursobackend#readme"
+}
