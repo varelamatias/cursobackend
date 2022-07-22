@@ -1,21 +1,22 @@
 
-class Usuario {
-    constructor( nombre, apellido, libros, mascotas){
-    this.nombre = nombre;
-    this.apellido = apellido;
-    this.libros = libros;
-    this.mascotas = mascotas;
-    }
-    
-    getFullName(){
-        console.log(`${this.nombre}`);
-    }
+const Contenedor = require("./contenedor");
+
+const contenedor = new Contenedor('./productos.txt')
+contenedor.save({ nombre: 'acciones', precio: 40 })
+
+// contenedor.getByID()
+// contenedor.getAll()
+// contenedor.delete(2)
+// contenedor.deleteALL(2)
 
 
 
-}
 
-const nombre = 'CODER'
+
+
+
+
+
 
 
 
