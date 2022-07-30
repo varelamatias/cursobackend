@@ -40,12 +40,25 @@ class Contenedor {
     }
 
 
+    async getByIdRandom(){
+        try {
+            let dataFile = await fs.promises.readFile(this.ruta, 'utf-8')
+            let dataFileParse = JSON.parse(dataFile)
+
+            let producto = dataFileParse [Math.floor(Math.random()*dataFileParse.length)]
+            return producto
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+
     async getAll() {
         try {
             let dataFile = await fs.promises.readFile(this.ruta, 'utf-8')
             let dataFileParse = JSON.parse(dataFile)
             if (dataFileParse.length) {
-                console.log(dataFileParse);
+                return dataFileParse
 
             } else {
                 console.log('sin productos');

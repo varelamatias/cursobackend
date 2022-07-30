@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/varelamatias/cursobackend/issues"
   },
-  "homepage": "https://github.com/varelamatias/cursobackend#readme"
+  "homepage": "https://github.com/varelamatias/cursobackend#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
