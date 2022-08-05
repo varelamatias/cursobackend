@@ -90,8 +90,42 @@ class Contenedor {
 
     async deleteALL(){
         await fs.promises.writeFile(this.ruta, JSON.stringify([], null,2))
+
     }
 
+    
+    async upById(obj) {
+        try {
+            let dataArch = await fs.promises.readFile(this.ruta, 'utf8')
+            let dataArchParse = JSON.parse(dataArch)
+            const objIndex=dataArchParse.findIndex(prod=>prod.id===obj.id)
+            if (objIndex!== -1) {
+                dataArchParse[objIndex] = obj
+                await fs.promises.writeFile(this.ruta, JSON.stringify([...dataArchParse, { obj, id: dataArchParse[dataArchParse.lenght-1].id + 1 }], null, 2))
+                return{mensaje: 'actualizado'}
+            } else {
+
+                return{error: 'el producto no existe'}
+
+            }
+
+        } catch (error) {
+            console.log(error);
+        }
+
+
+    }
+
+
+
+
 }
+
+
+
+
+
+
+
 
 module.exports = Contenedor

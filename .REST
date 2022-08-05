@@ -1,0 +1,8 @@
+PUT http://localhost:8080/api/productos/2 HTTP/1.1
+Content-Type: application/json
+
+{
+    "title":"producto2",
+    "price":"100",
+    "thumbnail":"Categoria2"
+}
